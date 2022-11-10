@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  ConcertReviews
-//
-//  Created by Alumnos on 8/11/22.
-//
 
 import UIKit
 
@@ -11,10 +5,10 @@ class ConcertListViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var concertsTableView: UITableView!
     
-    let concerts: [Concert] = [Concert(image: "foto1", name: "Eminem"),
-                               Concert(image: "foto2", name: "Bruce Springsteen"),
-                               Concert(image: "foto3", name: "Guns & Roses"),
-                               Concert(image: "foto4", name: "Daft Punk")]
+    let concerts: [Concert] = [Concert(image: "eminem", band: "Eminem"),
+                               Concert(image: "brucespringsteen", band: "Bruce Springsteen"),
+                               Concert(image: "gunsnroses", band: "Guns 'n' Roses"),
+                               Concert(image: "daftpunk", band: "Daft Punk")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +20,19 @@ class ConcertListViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = concerts[indexPath.row].name
-        return cell
+        let concertRow: ConcertRow = tableView.dequeueReusableCell(withIdentifier: "concertRowID", for: indexPath) as! ConcertRow
+        let concert = concerts[indexPath.row]
+        
+        concertRow.band.text = concert.band
+        concertRow.concertImage.image = UIImage(named: concert.image)
+        
+        if let averageRating = concert.averageRating {
+            concertRow.averageRating.progress = averageRating / Concert.MAX_RATING
+        } else {
+            concertRow.averageRating.isHidden = true
+        }
+        
+        return concertRow
     }
 
 }

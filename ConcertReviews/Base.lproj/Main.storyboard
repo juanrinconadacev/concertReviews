@@ -16,9 +16,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mON-DT-5ON">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mON-DT-5ON">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="concertRowID" id="2CV-iM-cJg" customClass="ConcertRow" customModule="ConcertReviews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2CV-iM-cJg" id="JfW-3C-a7G">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-z5-5rK">
+                                                    <rect key="frame" x="10" y="10" width="106.5" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="sfr-z5-5rK" secondAttribute="height" multiplier="4:3" id="P68-Y7-PQD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grupo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-3v-Ugm">
+                                                    <rect key="frame" x="126.5" y="21" width="257.5" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="I7z-j3-bC8">
+                                                    <rect key="frame" x="126.5" y="75" width="257.5" height="4"/>
+                                                </progressView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I7z-j3-bC8" secondAttribute="trailing" constant="10" id="0fx-Fm-OKf"/>
+                                                <constraint firstItem="sfr-z5-5rK" firstAttribute="top" secondItem="JfW-3C-a7G" secondAttribute="top" constant="10" id="18V-qZ-8en"/>
+                                                <constraint firstItem="I7z-j3-bC8" firstAttribute="leading" secondItem="sfr-z5-5rK" secondAttribute="trailing" constant="10" id="3Tn-kD-0zr"/>
+                                                <constraint firstItem="wfh-3v-Ugm" firstAttribute="leading" secondItem="sfr-z5-5rK" secondAttribute="trailing" constant="10" id="7N1-PW-vWZ"/>
+                                                <constraint firstItem="sfr-z5-5rK" firstAttribute="leading" secondItem="JfW-3C-a7G" secondAttribute="leading" constant="10" id="ADS-Xu-Lkm"/>
+                                                <constraint firstItem="wfh-3v-Ugm" firstAttribute="top" secondItem="JfW-3C-a7G" secondAttribute="topMargin" constant="10" id="ScU-1b-mx4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wfh-3v-Ugm" secondAttribute="trailing" constant="10" id="oKU-us-ORc"/>
+                                                <constraint firstAttribute="bottom" secondItem="sfr-z5-5rK" secondAttribute="bottom" constant="10" id="qwV-Uu-tqa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="I7z-j3-bC8" secondAttribute="bottom" constant="10" id="sPx-wr-B2d"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="averageRating" destination="I7z-j3-bC8" id="Ryw-RR-QDq"/>
+                                            <outlet property="band" destination="wfh-3v-Ugm" id="t2M-YK-i6y"/>
+                                            <outlet property="concertImage" destination="sfr-z5-5rK" id="aOb-ni-E4N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
