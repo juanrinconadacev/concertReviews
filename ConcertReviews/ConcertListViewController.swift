@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ConcertListViewController: UIViewController, UITableViewDataSource {
+class ConcertListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var concertsTableView: UITableView!
     
@@ -13,6 +13,7 @@ class ConcertListViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         concertsTableView.dataSource = self
+        concertsTableView.delegate = self
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -33,6 +34,16 @@ class ConcertListViewController: UIViewController, UITableViewDataSource {
         }
         
         return concertRow
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToConcertDetail", sender: concerts[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let concertViewController = segue.destination as! ConcertViewController
+        let concert = sender as! Concert
+        concertViewController.concert = concert
     }
 
 }

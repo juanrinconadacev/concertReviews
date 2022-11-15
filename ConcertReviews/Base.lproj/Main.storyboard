@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ax1-DI-E6c">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Concert List View Controller-->
+        <!--Conciertos-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ConcertListViewController" customModule="ConcertReviews" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mON-DT-5ON">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="concertRowID" id="2CV-iM-cJg" customClass="ConcertRow" customModule="ConcertReviews" customModuleProvider="target">
@@ -73,16 +73,83 @@
                             <constraint firstItem="mON-DT-5ON" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vwr-Sy-J9f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Conciertos" id="pTa-qJ-nzE"/>
                     <connections>
                         <outlet property="concertsTableView" destination="mON-DT-5ON" id="o8m-Gh-7gQ"/>
+                        <segue destination="oUy-aK-ubT" kind="show" identifier="goToConcertDetail" id="FFi-Vs-TIr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="98"/>
+            <point key="canvasLocation" x="1051" y="40"/>
+        </scene>
+        <!--Concierto-->
+        <scene sceneID="n6B-Tg-0N5">
+            <objects>
+                <viewController id="oUy-aK-ubT" customClass="ConcertViewController" customModule="ConcertReviews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1YN-34-Icz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gunsnroses" translatesAutoresizingMaskIntoConstraints="NO" id="6XR-vN-SWC">
+                                <rect key="frame" x="0.0" y="88" width="414" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6XR-vN-SWC" secondAttribute="height" multiplier="19:9" id="LGg-Qq-FBM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guns 'n' Roses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1w0-wq-8hZ">
+                                <rect key="frame" x="120" y="314" width="174" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Ysw-5Z-IZA">
+                                <rect key="frame" x="30" y="377" width="354" height="4"/>
+                            </progressView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5Yu-Ih-F3z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6XR-vN-SWC" firstAttribute="top" secondItem="5Yu-Ih-F3z" secondAttribute="top" id="Aye-Mh-g9r"/>
+                            <constraint firstItem="5Yu-Ih-F3z" firstAttribute="trailing" secondItem="Ysw-5Z-IZA" secondAttribute="trailing" constant="30" id="Dg9-m3-fXL"/>
+                            <constraint firstItem="Ysw-5Z-IZA" firstAttribute="leading" secondItem="5Yu-Ih-F3z" secondAttribute="leading" constant="30" id="TeG-W9-6VY"/>
+                            <constraint firstItem="1w0-wq-8hZ" firstAttribute="centerX" secondItem="1YN-34-Icz" secondAttribute="centerX" id="qwf-6h-jsN"/>
+                            <constraint firstItem="Ysw-5Z-IZA" firstAttribute="top" secondItem="1w0-wq-8hZ" secondAttribute="bottom" constant="30" id="rkk-Sv-M43"/>
+                            <constraint firstItem="5Yu-Ih-F3z" firstAttribute="trailing" secondItem="6XR-vN-SWC" secondAttribute="trailing" id="wMR-EW-Ask"/>
+                            <constraint firstItem="6XR-vN-SWC" firstAttribute="leading" secondItem="5Yu-Ih-F3z" secondAttribute="leading" id="weu-Mc-ys5"/>
+                            <constraint firstItem="1w0-wq-8hZ" firstAttribute="top" secondItem="6XR-vN-SWC" secondAttribute="bottom" constant="30" id="z0K-Id-a44"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Concierto" id="BOX-dh-9fG"/>
+                    <connections>
+                        <outlet property="averageRating" destination="Ysw-5Z-IZA" id="8g3-4L-w6q"/>
+                        <outlet property="bandName" destination="1w0-wq-8hZ" id="vx2-FA-RuY"/>
+                        <outlet property="imageView" destination="6XR-vN-SWC" id="lm0-mA-blS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTP-bn-wmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1964" y="40"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7Od-ZA-xgc">
+            <objects>
+                <navigationController id="Ax1-DI-E6c" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAO-Hg-P85">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FxE-JB-9df"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TkT-aH-AkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="40"/>
         </scene>
     </scenes>
     <resources>
+        <image name="gunsnroses" width="275" height="183"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

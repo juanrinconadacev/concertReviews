@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F3D69B429238D8A00DA046D /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D69B329238D8A00DA046D /* ConcertViewController.swift */; };
 		7F6E445E291CF4710074B6FE /* ConcertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E445D291CF4710074B6FE /* ConcertRow.swift */; };
 		7FDD6ABB291A68EC0001EC5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6ABA291A68EC0001EC5C /* AppDelegate.swift */; };
 		7FDD6ABD291A68EC0001EC5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6ABC291A68EC0001EC5C /* SceneDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F3D69B329238D8A00DA046D /* ConcertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
 		7F6E445D291CF4710074B6FE /* ConcertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertRow.swift; sourceTree = "<group>"; };
 		7FDD6AB7291A68EC0001EC5C /* ConcertReviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertReviews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDD6ABA291A68EC0001EC5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				7FDD6ABA291A68EC0001EC5C /* AppDelegate.swift */,
 				7FDD6ABC291A68EC0001EC5C /* SceneDelegate.swift */,
 				7FDD6ABE291A68EC0001EC5C /* ConcertListViewController.swift */,
+				7F3D69B329238D8A00DA046D /* ConcertViewController.swift */,
 				7F6E445D291CF4710074B6FE /* ConcertRow.swift */,
 				7FDD6ACE291A6BDF0001EC5C /* Concert.swift */,
 				7FDD6AC0291A68EC0001EC5C /* Main.storyboard */,
@@ -149,6 +152,7 @@
 				7FDD6ABB291A68EC0001EC5C /* AppDelegate.swift in Sources */,
 				7FDD6ACF291A6BDF0001EC5C /* Concert.swift in Sources */,
 				7FDD6ABD291A68EC0001EC5C /* SceneDelegate.swift in Sources */,
+				7F3D69B429238D8A00DA046D /* ConcertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
