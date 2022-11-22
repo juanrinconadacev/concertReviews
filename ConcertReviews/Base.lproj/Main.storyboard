@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -106,13 +107,26 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Ysw-5Z-IZA">
                                 <rect key="frame" x="30" y="377" width="354" height="4"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-cl-lf5">
+                                <rect key="frame" x="20" y="798" width="374" height="44"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Dejar Reseña"/>
+                                <connections>
+                                    <segue destination="aqC-nD-3dF" kind="show" id="1c2-uh-R5k"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Yu-Ih-F3z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5Yu-Ih-F3z" firstAttribute="bottom" secondItem="EEd-cl-lf5" secondAttribute="bottom" constant="20" id="699-zS-3Ud"/>
                             <constraint firstItem="6XR-vN-SWC" firstAttribute="top" secondItem="5Yu-Ih-F3z" secondAttribute="top" id="Aye-Mh-g9r"/>
                             <constraint firstItem="5Yu-Ih-F3z" firstAttribute="trailing" secondItem="Ysw-5Z-IZA" secondAttribute="trailing" constant="30" id="Dg9-m3-fXL"/>
+                            <constraint firstItem="5Yu-Ih-F3z" firstAttribute="trailing" secondItem="EEd-cl-lf5" secondAttribute="trailing" constant="20" id="PMk-4U-cqO"/>
                             <constraint firstItem="Ysw-5Z-IZA" firstAttribute="leading" secondItem="5Yu-Ih-F3z" secondAttribute="leading" constant="30" id="TeG-W9-6VY"/>
+                            <constraint firstItem="EEd-cl-lf5" firstAttribute="leading" secondItem="5Yu-Ih-F3z" secondAttribute="leading" constant="20" id="q5G-ur-yi9"/>
                             <constraint firstItem="1w0-wq-8hZ" firstAttribute="centerX" secondItem="1YN-34-Icz" secondAttribute="centerX" id="qwf-6h-jsN"/>
                             <constraint firstItem="Ysw-5Z-IZA" firstAttribute="top" secondItem="1w0-wq-8hZ" secondAttribute="bottom" constant="30" id="rkk-Sv-M43"/>
                             <constraint firstItem="5Yu-Ih-F3z" firstAttribute="trailing" secondItem="6XR-vN-SWC" secondAttribute="trailing" id="wMR-EW-Ask"/>
@@ -130,6 +144,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTP-bn-wmA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1964" y="40"/>
+        </scene>
+        <!--Dejar Reseña-->
+        <scene sceneID="4fY-cH-nmo">
+            <objects>
+                <viewController id="aqC-nD-3dF" customClass="InputReviewViewController" customModule="ConcertReviews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zim-zr-nPB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="Cxb-Rq-Rmp">
+                                <rect key="frame" x="18" y="203" width="378" height="31"/>
+                                <connections>
+                                    <action selector="ratingChanged:" destination="aqC-nD-3dF" eventType="valueChanged" id="QcA-xw-XHk"/>
+                                </connections>
+                            </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="bezel" placeholder="Escribre tu comentario..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0MS-Df-eX5">
+                                <rect key="frame" x="20" y="263" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="m24-1B-i3f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="commentChanged:" destination="aqC-nD-3dF" eventType="editingChanged" id="OXf-iD-ZCp"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-kQ-UEO">
+                                <rect key="frame" x="20" y="798" width="374" height="44"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="sendReview:" destination="aqC-nD-3dF" eventType="touchUpInside" id="8Mu-eg-amh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvG-h4-f5C">
+                                <rect key="frame" x="193" y="118" width="28" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="TTe-Z3-gdd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cxb-Rq-Rmp" firstAttribute="leading" secondItem="TTe-Z3-gdd" secondAttribute="leading" constant="20" id="CEG-X8-Uxt"/>
+                            <constraint firstItem="TTe-Z3-gdd" firstAttribute="trailing" secondItem="0MS-Df-eX5" secondAttribute="trailing" constant="20" id="Dai-Pg-iGE"/>
+                            <constraint firstItem="TTe-Z3-gdd" firstAttribute="trailing" secondItem="Cxb-Rq-Rmp" secondAttribute="trailing" constant="20" id="FFY-yk-gme"/>
+                            <constraint firstItem="yvG-h4-f5C" firstAttribute="centerX" secondItem="zim-zr-nPB" secondAttribute="centerX" id="RHx-TP-rcE"/>
+                            <constraint firstItem="3tl-kQ-UEO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0MS-Df-eX5" secondAttribute="bottom" constant="30" id="Tg9-Xc-eQY"/>
+                            <constraint firstItem="Cxb-Rq-Rmp" firstAttribute="top" secondItem="yvG-h4-f5C" secondAttribute="bottom" constant="30" id="YEh-xT-WFv"/>
+                            <constraint firstItem="TTe-Z3-gdd" firstAttribute="trailing" secondItem="3tl-kQ-UEO" secondAttribute="trailing" constant="20" id="bk1-Ce-1CN"/>
+                            <constraint firstItem="0MS-Df-eX5" firstAttribute="leading" secondItem="TTe-Z3-gdd" secondAttribute="leading" constant="20" id="dVw-9Z-Xsg"/>
+                            <constraint firstItem="0MS-Df-eX5" firstAttribute="top" secondItem="Cxb-Rq-Rmp" secondAttribute="bottom" constant="30" id="ipB-Q8-wMs"/>
+                            <constraint firstItem="yvG-h4-f5C" firstAttribute="top" secondItem="TTe-Z3-gdd" secondAttribute="top" constant="30" id="oSm-2g-owu"/>
+                            <constraint firstItem="TTe-Z3-gdd" firstAttribute="bottom" secondItem="3tl-kQ-UEO" secondAttribute="bottom" constant="20" id="rLc-ro-jha"/>
+                            <constraint firstItem="3tl-kQ-UEO" firstAttribute="leading" secondItem="TTe-Z3-gdd" secondAttribute="leading" constant="20" id="shS-vw-j7n"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dejar Reseña" id="Piu-kH-0n6"/>
+                    <connections>
+                        <outlet property="ratingLabel" destination="yvG-h4-f5C" id="CDf-1s-9zm"/>
+                        <outlet property="sendButton" destination="3tl-kQ-UEO" id="gqA-Q4-R1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1z-T1-Zqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2820" y="40"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7Od-ZA-xgc">
@@ -150,6 +233,12 @@
     </scenes>
     <resources>
         <image name="gunsnroses" width="275" height="183"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

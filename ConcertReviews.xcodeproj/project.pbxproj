@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		7F3D69B429238D8A00DA046D /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D69B329238D8A00DA046D /* ConcertViewController.swift */; };
 		7F6E445E291CF4710074B6FE /* ConcertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E445D291CF4710074B6FE /* ConcertRow.swift */; };
+		7FB8ABEB292CC53F009FD7D8 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8ABEA292CC53F009FD7D8 /* Review.swift */; };
+		7FB8ABED292CC801009FD7D8 /* InputReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */; };
+		7FB8ABEF292CD973009FD7D8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8ABEE292CD973009FD7D8 /* DataManager.swift */; };
 		7FDD6ABB291A68EC0001EC5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6ABA291A68EC0001EC5C /* AppDelegate.swift */; };
 		7FDD6ABD291A68EC0001EC5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6ABC291A68EC0001EC5C /* SceneDelegate.swift */; };
 		7FDD6ABF291A68EC0001EC5C /* ConcertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FDD6ABE291A68EC0001EC5C /* ConcertListViewController.swift */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		7F3D69B329238D8A00DA046D /* ConcertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
 		7F6E445D291CF4710074B6FE /* ConcertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertRow.swift; sourceTree = "<group>"; };
+		7FB8ABEA292CC53F009FD7D8 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputReviewViewController.swift; sourceTree = "<group>"; };
+		7FB8ABEE292CD973009FD7D8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		7FDD6AB7291A68EC0001EC5C /* ConcertReviews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcertReviews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDD6ABA291A68EC0001EC5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FDD6ABC291A68EC0001EC5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,8 +72,11 @@
 				7FDD6ABC291A68EC0001EC5C /* SceneDelegate.swift */,
 				7FDD6ABE291A68EC0001EC5C /* ConcertListViewController.swift */,
 				7F3D69B329238D8A00DA046D /* ConcertViewController.swift */,
+				7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */,
 				7F6E445D291CF4710074B6FE /* ConcertRow.swift */,
+				7FB8ABEE292CD973009FD7D8 /* DataManager.swift */,
 				7FDD6ACE291A6BDF0001EC5C /* Concert.swift */,
+				7FB8ABEA292CC53F009FD7D8 /* Review.swift */,
 				7FDD6AC0291A68EC0001EC5C /* Main.storyboard */,
 				7FDD6AC3291A68EE0001EC5C /* Assets.xcassets */,
 				7FDD6AC5291A68EE0001EC5C /* LaunchScreen.storyboard */,
@@ -149,9 +158,12 @@
 			files = (
 				7FDD6ABF291A68EC0001EC5C /* ConcertListViewController.swift in Sources */,
 				7F6E445E291CF4710074B6FE /* ConcertRow.swift in Sources */,
+				7FB8ABEB292CC53F009FD7D8 /* Review.swift in Sources */,
+				7FB8ABED292CC801009FD7D8 /* InputReviewViewController.swift in Sources */,
 				7FDD6ABB291A68EC0001EC5C /* AppDelegate.swift in Sources */,
 				7FDD6ACF291A6BDF0001EC5C /* Concert.swift in Sources */,
 				7FDD6ABD291A68EC0001EC5C /* SceneDelegate.swift in Sources */,
+				7FB8ABEF292CD973009FD7D8 /* DataManager.swift in Sources */,
 				7F3D69B429238D8A00DA046D /* ConcertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

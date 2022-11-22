@@ -9,19 +9,16 @@ class ConcertViewController: UIViewController {
     @IBOutlet weak var bandName: UILabel!
     @IBOutlet weak var averageRating: UIProgressView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
         imageView.image = UIImage(named: concert!.image)
         
         bandName.text = concert?.band
         
         if let rating = concert?.averageRating {
-            averageRating.progress = rating
+            averageRating.progress = rating / Concert.MAX_RATING
         } else {
             averageRating.isHidden = true
         }
-        
     }
 
 }
