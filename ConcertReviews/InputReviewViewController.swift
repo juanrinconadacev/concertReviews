@@ -46,7 +46,10 @@ class InputReviewViewController: UIViewController {
         // Añadir nueva reseña
         currentConcert.reviews.append(review)
         // Guardar los conciertos con la nueva reseña
-        DataManager.save()
+        DataManager.saveConcerts()
+        // Guardar la reseña de éste usuario
+        DataManager.getUsuario()?.reviews?.append(review)
+        DataManager.saveUser()
         // Volver a la pantalla de conciertos
         navigationController?.popToRootViewController(animated: true)
     }

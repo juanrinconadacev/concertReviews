@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ax1-DI-E6c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="O5h-3T-6ZD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mON-DT-5ON">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="concertRowID" id="2CV-iM-cJg" customClass="ConcertRow" customModule="ConcertReviews" customModuleProvider="target">
@@ -108,7 +108,7 @@
                                 <rect key="frame" x="30" y="377" width="354" height="4"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEd-cl-lf5">
-                                <rect key="frame" x="20" y="798" width="374" height="44"/>
+                                <rect key="frame" x="20" y="749" width="374" height="44"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -171,7 +171,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tl-kQ-UEO">
-                                <rect key="frame" x="20" y="798" width="374" height="44"/>
+                                <rect key="frame" x="20" y="749" width="374" height="44"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -214,10 +214,29 @@
             </objects>
             <point key="canvasLocation" x="2820" y="40"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="sal-Fh-2AU">
+            <objects>
+                <tabBarController id="O5h-3T-6ZD" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Ru-my-fM9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ax1-DI-E6c" kind="relationship" relationship="viewControllers" id="EiC-Jj-m9r"/>
+                        <segue destination="7OR-t7-v59" kind="relationship" relationship="viewControllers" id="6v3-nn-O5a"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sF-YH-aBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-897" y="40"/>
+        </scene>
+        <!--Conciertos-->
         <scene sceneID="7Od-ZA-xgc">
             <objects>
                 <navigationController id="Ax1-DI-E6c" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Conciertos" id="q7z-7U-i5i"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAO-Hg-P85">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -229,6 +248,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkT-aH-AkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149" y="40"/>
+        </scene>
+        <!--Perfil-->
+        <scene sceneID="lZM-xj-yhS">
+            <objects>
+                <viewController id="7OR-t7-v59" customClass="ProfileViewController" customModule="ConcertReviews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0G-wx-7D6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5w-Po-196">
+                                <rect key="frame" x="30" y="94" width="354" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameChanged:" destination="7OR-t7-v59" eventType="editingChanged" id="7fi-bL-c3B"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XlK-AN-I5r">
+                                <rect key="frame" x="0.0" y="185" width="414" height="628"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewRowID" rowHeight="118" id="VXb-iT-3Kw" customClass="ReviewRow" customModule="ConcertReviews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VXb-iT-3Kw" id="ncb-Wv-g5k">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VpA-cY-eLj">
+                                                    <rect key="frame" x="30" y="31" width="354" height="4"/>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texto..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGG-ei-aOB">
+                                                    <rect key="frame" x="30" y="51" width="354" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="VpA-cY-eLj" secondAttribute="trailing" constant="30" id="7h6-Pb-R4V"/>
+                                                <constraint firstItem="hGG-ei-aOB" firstAttribute="leading" secondItem="ncb-Wv-g5k" secondAttribute="leading" constant="30" id="E2h-JC-pZo"/>
+                                                <constraint firstItem="VpA-cY-eLj" firstAttribute="leading" secondItem="ncb-Wv-g5k" secondAttribute="leading" constant="30" id="HBp-Vo-gjn"/>
+                                                <constraint firstItem="VpA-cY-eLj" firstAttribute="top" secondItem="ncb-Wv-g5k" secondAttribute="topMargin" constant="20" id="Yk4-iP-5Cc"/>
+                                                <constraint firstItem="hGG-ei-aOB" firstAttribute="top" secondItem="VpA-cY-eLj" secondAttribute="top" constant="20" id="da9-el-rv2"/>
+                                                <constraint firstAttribute="trailing" secondItem="hGG-ei-aOB" secondAttribute="trailing" constant="30" id="mgU-Vw-uj1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ratingProgress" destination="VpA-cY-eLj" id="c0K-ve-tFj"/>
+                                            <outlet property="reviewLabel" destination="hGG-ei-aOB" id="lyb-U3-37n"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OuK-fM-gOW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OuK-fM-gOW" firstAttribute="trailing" secondItem="XlK-AN-I5r" secondAttribute="trailing" id="0IN-mX-Fwc"/>
+                            <constraint firstItem="OuK-fM-gOW" firstAttribute="trailing" secondItem="y5w-Po-196" secondAttribute="trailing" constant="30" id="3jl-Qh-pN9"/>
+                            <constraint firstItem="XlK-AN-I5r" firstAttribute="top" secondItem="y5w-Po-196" secondAttribute="bottom" constant="50" id="89D-bQ-qqn"/>
+                            <constraint firstItem="OuK-fM-gOW" firstAttribute="bottom" secondItem="XlK-AN-I5r" secondAttribute="bottom" id="DQ3-Yk-1wo"/>
+                            <constraint firstItem="y5w-Po-196" firstAttribute="top" secondItem="OuK-fM-gOW" secondAttribute="top" constant="50" id="RWQ-Mf-loL"/>
+                            <constraint firstItem="y5w-Po-196" firstAttribute="leading" secondItem="OuK-fM-gOW" secondAttribute="leading" constant="30" id="S5a-YM-Wbk"/>
+                            <constraint firstItem="XlK-AN-I5r" firstAttribute="leading" secondItem="OuK-fM-gOW" secondAttribute="leading" id="k1E-zB-xB0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Perfil" id="G0A-P3-MTR"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="y5w-Po-196" id="N1K-lc-FjM"/>
+                        <outlet property="reviewsTableView" destination="XlK-AN-I5r" id="dAc-Vu-x7F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vxc-Qy-Vw4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="796.875"/>
         </scene>
     </scenes>
     <resources>

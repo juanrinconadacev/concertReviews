@@ -9,7 +9,7 @@ class ConcertListViewController: UIViewController, UITableViewDataSource, UITabl
         super.viewDidLoad()
         concertsTableView.dataSource = self
         concertsTableView.delegate = self
-        DataManager.load()
+        DataManager.loadConcerts()
     }
     
     override func viewWillAppear(_ animated: Bool) {
