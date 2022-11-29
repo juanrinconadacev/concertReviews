@@ -236,7 +236,7 @@
         <scene sceneID="7Od-ZA-xgc">
             <objects>
                 <navigationController id="Ax1-DI-E6c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conciertos" id="q7z-7U-i5i"/>
+                    <tabBarItem key="tabBarItem" title="Conciertos" image="icons8-menu-24" id="q7z-7U-i5i"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAO-Hg-P85">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -315,7 +315,7 @@
                             <constraint firstItem="XlK-AN-I5r" firstAttribute="leading" secondItem="OuK-fM-gOW" secondAttribute="leading" id="k1E-zB-xB0"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Perfil" id="G0A-P3-MTR"/>
+                    <tabBarItem key="tabBarItem" title="Perfil" image="icons8-user-24" id="G0A-P3-MTR"/>
                     <connections>
                         <outlet property="nameTextField" destination="y5w-Po-196" id="N1K-lc-FjM"/>
                         <outlet property="reviewsTableView" destination="XlK-AN-I5r" id="dAc-Vu-x7F"/>
@@ -328,6 +328,8 @@
     </scenes>
     <resources>
         <image name="gunsnroses" width="275" height="183"/>
+        <image name="icons8-menu-24" width="24" height="24"/>
+        <image name="icons8-user-24" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

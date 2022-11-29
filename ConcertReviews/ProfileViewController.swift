@@ -13,7 +13,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
         reviewsTableView.dataSource = self
 
-        DataManager.loadUser()
         reviewsTableView.reloadData()
         nameTextField.text = DataManager.getUsuario()?.name
     }

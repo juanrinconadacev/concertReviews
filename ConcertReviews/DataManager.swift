@@ -51,6 +51,7 @@ class DataManager {
         }
         let decoder = JSONDecoder()
         if let json = try? decoder.decode(User.self, from: data as! Data) {
+            user = json
             return user
         } else {
             print("Error al cargar datos de usuario")
@@ -67,6 +68,6 @@ class DataManager {
                 return user
             }
         }
-        return nil
+        return user
     }
 }
