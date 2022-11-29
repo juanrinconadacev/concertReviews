@@ -4,13 +4,10 @@ import UIKit
 class ProfileViewController: UIViewController, UITableViewDataSource {
     
     
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var reviewsTableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewWillAppear(_ animated: Bool) {
         reviewsTableView.dataSource = self
 
         reviewsTableView.reloadData()

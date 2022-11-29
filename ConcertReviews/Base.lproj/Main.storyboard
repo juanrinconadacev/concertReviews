@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="concertRowID" id="2CV-iM-cJg" customClass="ConcertRow" customModule="ConcertReviews" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="concertRowID" rowHeight="100" id="2CV-iM-cJg" customClass="ConcertRow" customModule="ConcertReviews" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2CV-iM-cJg" id="JfW-3C-a7G">
@@ -186,6 +186,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="∑" preferredStyle="sliding" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-gi-qZE">
+                                <rect key="frame" x="20" y="593" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardar en mis reseñas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAO-hg-mtV">
+                                <rect key="frame" x="89" y="598" width="180" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TTe-Z3-gdd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -193,11 +202,15 @@
                             <constraint firstItem="Cxb-Rq-Rmp" firstAttribute="leading" secondItem="TTe-Z3-gdd" secondAttribute="leading" constant="20" id="CEG-X8-Uxt"/>
                             <constraint firstItem="TTe-Z3-gdd" firstAttribute="trailing" secondItem="0MS-Df-eX5" secondAttribute="trailing" constant="20" id="Dai-Pg-iGE"/>
                             <constraint firstItem="TTe-Z3-gdd" firstAttribute="trailing" secondItem="Cxb-Rq-Rmp" secondAttribute="trailing" constant="20" id="FFY-yk-gme"/>
+                            <constraint firstItem="hAm-gi-qZE" firstAttribute="top" secondItem="0MS-Df-eX5" secondAttribute="bottom" constant="30" id="REz-2b-eMp"/>
                             <constraint firstItem="yvG-h4-f5C" firstAttribute="centerX" secondItem="zim-zr-nPB" secondAttribute="centerX" id="RHx-TP-rcE"/>
                             <constraint firstItem="3tl-kQ-UEO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="0MS-Df-eX5" secondAttribute="bottom" constant="30" id="Tg9-Xc-eQY"/>
+                            <constraint firstItem="IAO-hg-mtV" firstAttribute="leading" secondItem="hAm-gi-qZE" secondAttribute="trailing" constant="20" id="VTl-OS-ClN"/>
                             <constraint firstItem="Cxb-Rq-Rmp" firstAttribute="top" secondItem="yvG-h4-f5C" secondAttribute="bottom" constant="30" id="YEh-xT-WFv"/>
+                            <constraint firstItem="hAm-gi-qZE" firstAttribute="leading" secondItem="TTe-Z3-gdd" secondAttribute="leading" constant="20" id="Ziz-eM-mRv"/>
                             <constraint firstItem="TTe-Z3-gdd" firstAttribute="trailing" secondItem="3tl-kQ-UEO" secondAttribute="trailing" constant="20" id="bk1-Ce-1CN"/>
                             <constraint firstItem="0MS-Df-eX5" firstAttribute="leading" secondItem="TTe-Z3-gdd" secondAttribute="leading" constant="20" id="dVw-9Z-Xsg"/>
+                            <constraint firstItem="IAO-hg-mtV" firstAttribute="top" secondItem="0MS-Df-eX5" secondAttribute="bottom" constant="35" id="gI3-bC-x4i"/>
                             <constraint firstItem="0MS-Df-eX5" firstAttribute="top" secondItem="Cxb-Rq-Rmp" secondAttribute="bottom" constant="30" id="ipB-Q8-wMs"/>
                             <constraint firstItem="yvG-h4-f5C" firstAttribute="top" secondItem="TTe-Z3-gdd" secondAttribute="top" constant="30" id="oSm-2g-owu"/>
                             <constraint firstItem="TTe-Z3-gdd" firstAttribute="bottom" secondItem="3tl-kQ-UEO" secondAttribute="bottom" constant="20" id="rLc-ro-jha"/>
@@ -207,6 +220,7 @@
                     <navigationItem key="navigationItem" title="Dejar Reseña" id="Piu-kH-0n6"/>
                     <connections>
                         <outlet property="ratingLabel" destination="yvG-h4-f5C" id="CDf-1s-9zm"/>
+                        <outlet property="saveInMyReviews" destination="hAm-gi-qZE" id="F9u-93-XcE"/>
                         <outlet property="sendButton" destination="3tl-kQ-UEO" id="gqA-Q4-R1Z"/>
                     </connections>
                 </viewController>
@@ -258,22 +272,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu nombre" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y5w-Po-196">
-                                <rect key="frame" x="30" y="94" width="354" height="41"/>
+                                <rect key="frame" x="30" y="104.5" width="354" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="nameChanged:" destination="7OR-t7-v59" eventType="editingChanged" id="7fi-bL-c3B"/>
                                 </connections>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XlK-AN-I5r">
-                                <rect key="frame" x="0.0" y="185" width="414" height="628"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XlK-AN-I5r">
+                                <rect key="frame" x="0.0" y="205.5" width="414" height="607.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewRowID" rowHeight="118" id="VXb-iT-3Kw" customClass="ReviewRow" customModule="ConcertReviews" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="118"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reviewRowID" rowHeight="120" id="VXb-iT-3Kw" customClass="ReviewRow" customModule="ConcertReviews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VXb-iT-3Kw" id="ncb-Wv-g5k">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="VpA-cY-eLj">
@@ -302,17 +316,33 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mi nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVc-yV-xfA">
+                                <rect key="frame" x="166" y="64" width="82" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mis reseñas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhJ-Nq-SWm">
+                                <rect key="frame" x="161.5" y="175.5" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OuK-fM-gOW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OuK-fM-gOW" firstAttribute="trailing" secondItem="XlK-AN-I5r" secondAttribute="trailing" id="0IN-mX-Fwc"/>
+                            <constraint firstItem="tVc-yV-xfA" firstAttribute="top" secondItem="OuK-fM-gOW" secondAttribute="top" constant="20" id="2ya-he-Ta9"/>
                             <constraint firstItem="OuK-fM-gOW" firstAttribute="trailing" secondItem="y5w-Po-196" secondAttribute="trailing" constant="30" id="3jl-Qh-pN9"/>
-                            <constraint firstItem="XlK-AN-I5r" firstAttribute="top" secondItem="y5w-Po-196" secondAttribute="bottom" constant="50" id="89D-bQ-qqn"/>
+                            <constraint firstItem="XlK-AN-I5r" firstAttribute="top" secondItem="y5w-Po-196" secondAttribute="bottom" constant="60" id="89D-bQ-qqn"/>
                             <constraint firstItem="OuK-fM-gOW" firstAttribute="bottom" secondItem="XlK-AN-I5r" secondAttribute="bottom" id="DQ3-Yk-1wo"/>
-                            <constraint firstItem="y5w-Po-196" firstAttribute="top" secondItem="OuK-fM-gOW" secondAttribute="top" constant="50" id="RWQ-Mf-loL"/>
+                            <constraint firstItem="jhJ-Nq-SWm" firstAttribute="centerX" secondItem="v0G-wx-7D6" secondAttribute="centerX" id="EW5-Hk-KHA"/>
+                            <constraint firstItem="tVc-yV-xfA" firstAttribute="centerX" secondItem="v0G-wx-7D6" secondAttribute="centerX" id="QZk-5q-M6P"/>
                             <constraint firstItem="y5w-Po-196" firstAttribute="leading" secondItem="OuK-fM-gOW" secondAttribute="leading" constant="30" id="S5a-YM-Wbk"/>
                             <constraint firstItem="XlK-AN-I5r" firstAttribute="leading" secondItem="OuK-fM-gOW" secondAttribute="leading" id="k1E-zB-xB0"/>
+                            <constraint firstItem="y5w-Po-196" firstAttribute="top" secondItem="tVc-yV-xfA" secondAttribute="bottom" constant="20" id="kx0-FQ-v2H"/>
+                            <constraint firstItem="jhJ-Nq-SWm" firstAttribute="top" secondItem="y5w-Po-196" secondAttribute="bottom" constant="30" id="mQE-IA-QdY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Perfil" image="icons8-user-24" id="G0A-P3-MTR"/>

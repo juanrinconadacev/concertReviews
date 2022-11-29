@@ -11,6 +11,7 @@ class InputReviewViewController: UIViewController {
 
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var saveInMyReviews: UISwitch!
     
     var rating: Int = 3
     var comment: String = ""
@@ -48,8 +49,10 @@ class InputReviewViewController: UIViewController {
         // Guardar los conciertos con la nueva reseña
         DataManager.saveConcerts()
         // Guardar la reseña de éste usuario
-        DataManager.getUsuario()?.reviews?.append(review)
-        DataManager.saveUser()
+        if (saveInMyReviews.isOn) {
+            DataManager.getUsuario()?.reviews?.append(review)
+            DataManager.saveUser()
+        }
         // Volver a la pantalla de conciertos
         navigationController?.popToRootViewController(animated: true)
     }
