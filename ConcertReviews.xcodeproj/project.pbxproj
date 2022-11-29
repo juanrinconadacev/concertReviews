@@ -55,6 +55,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F17A3662936081C00AD89C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FDD6ABE291A68EC0001EC5C /* ConcertListViewController.swift */,
+				7F3D69B329238D8A00DA046D /* ConcertViewController.swift */,
+				7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */,
+				7F01AB082934CBA200F44988 /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7F17A3672936083B00AD89C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F6E445D291CF4710074B6FE /* ConcertRow.swift */,
+				7F01AB0A2934D0EC00F44988 /* ReviewRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F17A3682936084B00AD89C6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7FB8ABEE292CD973009FD7D8 /* DataManager.swift */,
+				7FDD6ACE291A6BDF0001EC5C /* Concert.swift */,
+				7FB8ABEA292CC53F009FD7D8 /* Review.swift */,
+				7F01AB062934C95A00F44988 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7FDD6AAE291A68EC0001EC5C = {
 			isa = PBXGroup;
 			children = (
@@ -74,18 +105,11 @@
 		7FDD6AB9291A68EC0001EC5C /* ConcertReviews */ = {
 			isa = PBXGroup;
 			children = (
+				7F17A3682936084B00AD89C6 /* Model */,
+				7F17A3672936083B00AD89C6 /* Views */,
+				7F17A3662936081C00AD89C6 /* Controllers */,
 				7FDD6ABA291A68EC0001EC5C /* AppDelegate.swift */,
 				7FDD6ABC291A68EC0001EC5C /* SceneDelegate.swift */,
-				7FDD6ABE291A68EC0001EC5C /* ConcertListViewController.swift */,
-				7F3D69B329238D8A00DA046D /* ConcertViewController.swift */,
-				7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */,
-				7F01AB082934CBA200F44988 /* ProfileViewController.swift */,
-				7F6E445D291CF4710074B6FE /* ConcertRow.swift */,
-				7F01AB0A2934D0EC00F44988 /* ReviewRow.swift */,
-				7FB8ABEE292CD973009FD7D8 /* DataManager.swift */,
-				7FDD6ACE291A6BDF0001EC5C /* Concert.swift */,
-				7FB8ABEA292CC53F009FD7D8 /* Review.swift */,
-				7F01AB062934C95A00F44988 /* User.swift */,
 				7FDD6AC0291A68EC0001EC5C /* Main.storyboard */,
 				7FDD6AC3291A68EE0001EC5C /* Assets.xcassets */,
 				7FDD6AC5291A68EE0001EC5C /* LaunchScreen.storyboard */,
