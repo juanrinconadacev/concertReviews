@@ -32,6 +32,5 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         reviewRow.reviewLabel.text = review?.comment
         
         return reviewRow
-        
     }
 }
