@@ -288,19 +288,20 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Ax1-DI-E6c" kind="relationship" relationship="viewControllers" id="EiC-Jj-m9r"/>
-                        <segue destination="7OR-t7-v59" kind="relationship" relationship="viewControllers" id="6v3-nn-O5a"/>
+                        <segue destination="Ax1-DI-E6c" kind="relationship" relationship="viewControllers" id="zyy-f2-oxX"/>
+                        <segue destination="oQR-VT-gqs" kind="relationship" relationship="viewControllers" id="4US-BZ-i5U"/>
+                        <segue destination="7OR-t7-v59" kind="relationship" relationship="viewControllers" id="IlQ-hi-Uem"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sF-YH-aBX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-897" y="40"/>
         </scene>
-        <!--Conciertos-->
+        <!--Reseñas-->
         <scene sceneID="7Od-ZA-xgc">
             <objects>
                 <navigationController id="Ax1-DI-E6c" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Conciertos" image="icons8-menu-24" id="q7z-7U-i5i"/>
+                    <tabBarItem key="tabBarItem" title="Reseñas" image="icons8-menu-24" id="q7z-7U-i5i"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RAO-Hg-P85">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -312,6 +313,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TkT-aH-AkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="149" y="40"/>
+        </scene>
+        <!--Conciertos-->
+        <scene sceneID="jtq-LB-u0T">
+            <objects>
+                <viewController id="oQR-VT-gqs" customClass="BandsViewController" customModule="ConcertReviews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bg8-nC-8Ew">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V3n-yA-SKl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bandRowID" id="6Yk-OD-thf" customClass="BandRow" customModule="ConcertReviews" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Yk-OD-thf" id="ol8-ve-OOx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MSb-wn-3ed">
+                                                    <rect key="frame" x="10" y="10" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="NZR-jY-SPB"/>
+                                                        <constraint firstAttribute="width" constant="80" id="w6u-Jl-VZS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lT5-Fo-ZkV">
+                                                    <rect key="frame" x="110" y="10" width="94" height="33"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripción" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLn-6U-HE4">
+                                                    <rect key="frame" x="110" y="53" width="91" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qLn-6U-HE4" firstAttribute="leading" secondItem="MSb-wn-3ed" secondAttribute="trailing" constant="20" id="64S-oY-3qu"/>
+                                                <constraint firstItem="lT5-Fo-ZkV" firstAttribute="leading" secondItem="MSb-wn-3ed" secondAttribute="trailing" constant="20" id="N4J-JE-Gct"/>
+                                                <constraint firstItem="qLn-6U-HE4" firstAttribute="top" secondItem="lT5-Fo-ZkV" secondAttribute="bottom" constant="10" id="Tsh-bO-hnG"/>
+                                                <constraint firstItem="MSb-wn-3ed" firstAttribute="leading" secondItem="ol8-ve-OOx" secondAttribute="leading" constant="10" id="fuH-gt-ncl"/>
+                                                <constraint firstItem="MSb-wn-3ed" firstAttribute="top" secondItem="ol8-ve-OOx" secondAttribute="top" constant="10" id="xZp-4T-Xvk"/>
+                                                <constraint firstItem="lT5-Fo-ZkV" firstAttribute="top" secondItem="ol8-ve-OOx" secondAttribute="top" constant="10" id="xrs-bh-LrC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bandBio" destination="qLn-6U-HE4" id="4gO-gc-CF5"/>
+                                            <outlet property="bandImage" destination="MSb-wn-3ed" id="P6J-mk-GVF"/>
+                                            <outlet property="bandName" destination="lT5-Fo-ZkV" id="XIB-tf-lKa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error de conexión" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BUZ-Zd-Ia0">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" id="5IX-T7-9Sk">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemMintColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aqj-qw-eex"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Aqj-qw-eex" firstAttribute="trailing" secondItem="V3n-yA-SKl" secondAttribute="trailing" id="0gZ-AD-1w5"/>
+                            <constraint firstItem="V3n-yA-SKl" firstAttribute="top" secondItem="Aqj-qw-eex" secondAttribute="top" id="6Od-sh-TeN"/>
+                            <constraint firstItem="V3n-yA-SKl" firstAttribute="leading" secondItem="Aqj-qw-eex" secondAttribute="leading" id="Qvi-5X-JwN"/>
+                            <constraint firstItem="Aqj-qw-eex" firstAttribute="bottom" secondItem="V3n-yA-SKl" secondAttribute="bottom" id="tiG-1z-m7n"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Conciertos" image="icons8-rock-music-24" id="adv-g7-6Kc"/>
+                    <connections>
+                        <outlet property="bandsTableView" destination="V3n-yA-SKl" id="y4G-17-e0g"/>
+                        <outlet property="loader" destination="5IX-T7-9Sk" id="otf-lq-qLT"/>
+                        <outlet property="messageLabel" destination="BUZ-Zd-Ia0" id="utU-gu-20Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="siW-hW-CK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="1024"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="lZM-xj-yhS">
@@ -409,6 +499,7 @@
     <resources>
         <image name="gunsnroses" width="275" height="183"/>
         <image name="icons8-menu-24" width="24" height="24"/>
+        <image name="icons8-rock-music-24" width="24" height="24"/>
         <image name="icons8-user-24" width="24" height="24"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -418,6 +509,12 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -12,6 +12,10 @@
 		7F01AB0B2934D0EC00F44988 /* ReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F01AB0A2934D0EC00F44988 /* ReviewRow.swift */; };
 		7F3D69B429238D8A00DA046D /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3D69B329238D8A00DA046D /* ConcertViewController.swift */; };
 		7F6E445E291CF4710074B6FE /* ConcertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6E445D291CF4710074B6FE /* ConcertRow.swift */; };
+		7F89315A2938A75A00DE0EC6 /* BandsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8931592938A75A00DE0EC6 /* BandsViewController.swift */; };
+		7F89315C2938A94300DE0EC6 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89315B2938A94300DE0EC6 /* Band.swift */; };
+		7F89315E2938A99E00DE0EC6 /* Bands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89315D2938A99E00DE0EC6 /* Bands.swift */; };
+		7F8931602938AA9B00DE0EC6 /* BandRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F89315F2938AA9B00DE0EC6 /* BandRow.swift */; };
 		7FB8ABEB292CC53F009FD7D8 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8ABEA292CC53F009FD7D8 /* Review.swift */; };
 		7FB8ABED292CC801009FD7D8 /* InputReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */; };
 		7FB8ABEF292CD973009FD7D8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB8ABEE292CD973009FD7D8 /* DataManager.swift */; };
@@ -30,6 +34,10 @@
 		7F01AB0A2934D0EC00F44988 /* ReviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRow.swift; sourceTree = "<group>"; };
 		7F3D69B329238D8A00DA046D /* ConcertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
 		7F6E445D291CF4710074B6FE /* ConcertRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertRow.swift; sourceTree = "<group>"; };
+		7F8931592938A75A00DE0EC6 /* BandsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandsViewController.swift; sourceTree = "<group>"; };
+		7F89315B2938A94300DE0EC6 /* Band.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
+		7F89315D2938A99E00DE0EC6 /* Bands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bands.swift; sourceTree = "<group>"; };
+		7F89315F2938AA9B00DE0EC6 /* BandRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BandRow.swift; sourceTree = "<group>"; };
 		7FB8ABEA292CC53F009FD7D8 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputReviewViewController.swift; sourceTree = "<group>"; };
 		7FB8ABEE292CD973009FD7D8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -62,6 +70,7 @@
 				7F3D69B329238D8A00DA046D /* ConcertViewController.swift */,
 				7FB8ABEC292CC801009FD7D8 /* InputReviewViewController.swift */,
 				7F01AB082934CBA200F44988 /* ProfileViewController.swift */,
+				7F8931592938A75A00DE0EC6 /* BandsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -71,6 +80,7 @@
 			children = (
 				7F6E445D291CF4710074B6FE /* ConcertRow.swift */,
 				7F01AB0A2934D0EC00F44988 /* ReviewRow.swift */,
+				7F89315F2938AA9B00DE0EC6 /* BandRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -82,6 +92,8 @@
 				7FDD6ACE291A6BDF0001EC5C /* Concert.swift */,
 				7FB8ABEA292CC53F009FD7D8 /* Review.swift */,
 				7F01AB062934C95A00F44988 /* User.swift */,
+				7F89315B2938A94300DE0EC6 /* Band.swift */,
+				7F89315D2938A99E00DE0EC6 /* Bands.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,12 +206,16 @@
 				7F6E445E291CF4710074B6FE /* ConcertRow.swift in Sources */,
 				7FB8ABEB292CC53F009FD7D8 /* Review.swift in Sources */,
 				7FB8ABED292CC801009FD7D8 /* InputReviewViewController.swift in Sources */,
+				7F8931602938AA9B00DE0EC6 /* BandRow.swift in Sources */,
 				7FDD6ABB291A68EC0001EC5C /* AppDelegate.swift in Sources */,
+				7F89315C2938A94300DE0EC6 /* Band.swift in Sources */,
+				7F89315A2938A75A00DE0EC6 /* BandsViewController.swift in Sources */,
 				7FDD6ACF291A6BDF0001EC5C /* Concert.swift in Sources */,
 				7F01AB092934CBA200F44988 /* ProfileViewController.swift in Sources */,
 				7FDD6ABD291A68EC0001EC5C /* SceneDelegate.swift in Sources */,
 				7FB8ABEF292CD973009FD7D8 /* DataManager.swift in Sources */,
 				7F01AB072934C95A00F44988 /* User.swift in Sources */,
+				7F89315E2938A99E00DE0EC6 /* Bands.swift in Sources */,
 				7F3D69B429238D8A00DA046D /* ConcertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
