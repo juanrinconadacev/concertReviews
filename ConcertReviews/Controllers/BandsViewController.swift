@@ -70,6 +70,17 @@ class BandsViewController: UIViewController, UITableViewDataSource {
         bandRow.bandName.text = band?.nombre
         bandRow.bandBio.text = band?.descripcion
         
+        DispatchQueue.global().async {
+            do {
+                let url = URL(string: band?.imagen ?? "")
+                let data = try Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    bandRow.bandImage.image = UIImage(data: data)
+                }
+            } catch {
+            }
+        }
+        
         return bandRow
     }
 
